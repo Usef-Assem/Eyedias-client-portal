@@ -34,10 +34,10 @@ const Sidebar = () => {
       <div className="w-16 md:w-16 lg:w-64 bg-[#FF5758] text-white flex flex-col shadow-lg h-full lg:static">
         {/* Logo */}
         <div className="p-3 md:p-3 lg:p-6 border-b border-white/20 flex-shrink-0">
-          <div className="flex flex-col text-sm text-[#ffffffcc] items-center lg:items-start justify-center">
+          <div className="flex flex-col text-sm text-[#ffffffcc] items-start justify-start">
             <button
               onClick={toggleSidebar}
-              className="lg:hidden p-1 hover:bg-white/10 rounded transition-colors duration-200"
+              className="lg:hidden p-1 hover:bg-white/10 rounded transition-colors duration-200 self-start"
             >
               <Menu className="w-6 h-6" />
             </button>

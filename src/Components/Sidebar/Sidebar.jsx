@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { LayoutDashboard, Briefcase, Trophy, Menu, X } from 'lucide-react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import logo from '../../assets/logo.svg'
 
 const Sidebar = () => {
@@ -41,7 +41,9 @@ const Sidebar = () => {
             >
               <Menu className="w-6 h-6" />
             </button>
+            <Link to="/">
             <img src={logo} alt="farapi Logo" className="hidden lg:block" />
+            </Link>
             <p className="hidden lg:block">Client Portal</p>
           </div>
         </div>
@@ -87,7 +89,9 @@ const Sidebar = () => {
           <div className="p-6 border-b border-white/20 flex-shrink-0">
             <div className="flex items-center justify-between">
               <div className="flex flex-col items-start">
-                <img src={logo} alt="farapi Logo" />
+                <Link to="/" onClick={toggleSidebar}>
+                  <img src={logo} alt="farapi Logo" />
+                </Link>
                 <p className="text-sm text-[#ffffffcc] mt-1">Client Portal</p>
               </div>
               <button

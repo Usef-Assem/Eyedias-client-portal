@@ -24,4 +24,4 @@ function Login(){
     </section>
   );
 };
-export default Login;
+export default Login

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { LayoutDashboard, Briefcase, Trophy, Menu, X } from 'lucide-react'
-import { NavLink } from 'react-router-dom' // بدل Link
+import { NavLink } from 'react-router-dom'
 import logo from '../../assets/logo.svg'
 
 const Sidebar = () => {
@@ -17,7 +17,7 @@ const Sidebar = () => {
   }
 
   const baseClasses =
-    'w-full flex items-center justify-center lg:justify-start space-x-0 lg:space-x-3 px-2 md:px-2 lg:px-4 py-3 rounded-lg text-left transition-all duration-200'
+    'w-full flex items-center justify-start space-x-3 px-2 md:px-2 lg:px-4 py-3 rounded-lg text-left transition-all duration-200'
   const inactiveClasses = 'text-white/80 hover:bg-white/10 hover:text-white'
   const activeClasses = 'bg-white/10 text-white'
 
@@ -34,7 +34,7 @@ const Sidebar = () => {
       <div className="w-16 md:w-16 lg:w-64 bg-[#FF5758] text-white flex flex-col shadow-lg h-full lg:static">
         {/* Logo */}
         <div className="p-3 md:p-3 lg:p-6 border-b border-white/20 flex-shrink-0">
-          <div className="flex flex-col text-sm text-[#ffffffcc] items-start justify-center lg:justify-center">
+          <div className="flex flex-col text-sm text-[#ffffffcc] items-center lg:items-start justify-center">
             <button
               onClick={toggleSidebar}
               className="lg:hidden p-1 hover:bg-white/10 rounded transition-colors duration-200"
@@ -42,7 +42,7 @@ const Sidebar = () => {
               <Menu className="w-6 h-6" />
             </button>
             <img src={logo} alt="farapi Logo" className="hidden lg:block" />
-            <p>Client Portal</p>
+            <p className="hidden lg:block">Client Portal</p>
           </div>
         </div>
 
@@ -62,7 +62,7 @@ const Sidebar = () => {
                 }
               >
                 <Icon className="w-5 h-5 flex-shrink-0" />
-                <span className="hidden lg:block font-medium">
+                <span className="hidden lg:block font-medium text-start">
                   {item.label}
                 </span>
               </NavLink>
@@ -86,7 +86,10 @@ const Sidebar = () => {
         <div className="fixed top-0 left-0 w-64 bg-[#FF5758] text-white flex flex-col shadow-lg h-full z-50 lg:hidden transform transition-transform duration-300 ease-in-out">
           <div className="p-6 border-b border-white/20 flex-shrink-0">
             <div className="flex items-center justify-between">
-              <img src={logo} alt="farapi Logo" />
+              <div className="flex flex-col items-start">
+                <img src={logo} alt="farapi Logo" />
+                <p className="text-sm text-[#ffffffcc] mt-1">Client Portal</p>
+              </div>
               <button
                 onClick={toggleSidebar}
                 className="p-1 hover:bg-white/10 rounded transition-colors duration-200"
@@ -111,7 +114,7 @@ const Sidebar = () => {
                   }
                 >
                   <Icon className="w-5 h-5 flex-shrink-0" />
-                  <span className="font-medium">{item.label}</span>
+                  <span className="font-medium text-start">{item.label}</span>
                 </NavLink>
               )
             })}

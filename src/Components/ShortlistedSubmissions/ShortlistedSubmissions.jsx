@@ -7,7 +7,7 @@ const ShortlistedSubmissions = memo(function ShortlistedSubmissions({shortlisted
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Shortlisted Submissions</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {shortlistedDesigns.map((design) => (
+              {shortlistedDesigns?.map((design) => (
                 <div key={design.id} className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-200">
                   <div className="relative">
                     <img

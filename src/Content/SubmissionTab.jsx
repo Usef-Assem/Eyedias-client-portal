@@ -1,5 +1,5 @@
 import React from 'react';
-import { Download, Eye, MessageCircle, Plus } from 'lucide-react';
+import { Eye, MessageCircle, Plus, Star } from 'lucide-react';
 
 function SubmissionTab() {
   // Sample submissions data
@@ -57,7 +57,7 @@ function SubmissionTab() {
                   Designer Name
                 </th>
                 <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Download
+                  Shortlist
                 </th>
                 <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                   View
@@ -84,20 +84,20 @@ function SubmissionTab() {
                     </div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-center">
-                    <button className="inline-flex items-center px-3 py-1.5 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 transition-colors">
-                      <Download className="w-4 h-4 mr-1" />
-                      Download
+                    <button className="inline-flex cursor-pointer items-center px-3 py-1.5 border border-yellow-300 rounded-md text-sm font-medium text-yellow-700 bg-yellow-50 hover:bg-yellow-100 transition-colors">
+                      <Star className="w-4 h-4 mr-1" />
+                      Shortlist
                     </button>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-center">
-                    <button className="inline-flex items-center px-3 py-1.5 border border-blue-300 rounded-md text-sm font-medium text-blue-700 bg-blue-50 hover:bg-blue-100 transition-colors">
+                    <button className="inline-flex cursor-pointer items-center px-3 py-1.5 border border-blue-300 rounded-md text-sm font-medium text-blue-700 bg-blue-50 hover:bg-blue-100 transition-colors">
                       <Eye className="w-4 h-4 mr-1" />
                       View
                     </button>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-center">
                     {submission.hasComments ? (
-                      <button className="inline-flex items-center px-3 py-1.5 border border-green-300 rounded-md text-sm font-medium text-green-700 bg-green-50 hover:bg-green-100 transition-colors">
+                      <button className="inline-flex cursor-pointer items-center px-3 py-1.5 border border-green-300 rounded-md text-sm font-medium text-green-700 bg-green-50 hover:bg-green-100 transition-colors">
                         <MessageCircle className="w-4 h-4 mr-1" />
                         Comments ({submission.commentsCount})
                       </button>
